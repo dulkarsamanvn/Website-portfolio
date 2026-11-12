@@ -1,9 +1,9 @@
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 const stack = [
-  { label: 'Frontend', tools: [{ name: 'React', icon: 'react' }, { name: 'JavaScript', icon: 'javascript' }, { name: 'Tailwind CSS', icon: 'tailwind' }] },
-  { label: 'Backend', tools: [{ name: 'Python', icon: 'python' }, { name: 'Django', icon: 'django' }, { name: 'FastAPI', icon: 'fastapi' }, { name: 'PHP', icon: 'php' }, { name: 'Laravel', icon: 'laravel' }] },
-  { label: 'Data & cloud', tools: [{ name: 'PostgreSQL', icon: 'postgresql' }, { name: 'Docker', icon: 'docker' }, { name: 'AWS', icon: 'aws' }, { name: 'Redis', icon: 'redis' }] },
+  { label: 'Web & mobile', tools: [{ name: 'React', icon: 'react' }, { name: 'React Native', icon: 'react' }, { name: 'JavaScript', icon: 'javascript' }] },
+  { label: 'Backend', tools: [{ name: 'Python', icon: 'python' }, { name: 'Django / DRF', icon: 'django' }, { name: 'FastAPI', icon: 'fastapi' }, { name: 'PHP', icon: 'php' }, { name: 'Laravel', icon: 'laravel' }] },
+  { label: 'Data & cloud', tools: [{ name: 'PostgreSQL', icon: 'postgresql' }, { name: 'Redis', icon: 'redis' }, { name: 'Docker', icon: 'docker' }, { name: 'AWS', icon: 'aws' }] },
 ];
 
 const technologies = stack.flatMap((group, category) => group.tools.map((tool) => ({ ...tool, category })));

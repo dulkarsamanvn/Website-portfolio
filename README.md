@@ -12,7 +12,8 @@ Use `npm run build` for the production bundle and `npm run preview` to serve it 
 ## Scroll experience
 
 - `src/components/Hero.jsx` keeps the portrait horizontally centered on desktop and mobile, with subtle scroll parallax.
-- `src/components/TechStack.jsx` shows twelve named technology logos in three rows of four. Its CSS 3D perspective follows scroll position, matching frontend, backend, and data/cloud tiles highlight alongside the skills list, and individual tiles lift slightly on hover.
+- `src/components/TechStack.jsx` shows twelve named technology logos in three rows of four, including React Native and a combined Django / DRF tile. Its CSS 3D perspective follows scroll position, matching web/mobile, backend, and data/cloud tiles highlight alongside the skills list, and individual tiles lift slightly on hover.
+- The detailed skills list covers frontend, mobile, backend, AI/LLMs, APIs and real-time communication, authentication, databases, deployment and containers, PWAs, languages, tools/version control, and algorithms. The additions are drawn from the supplied resume, including its project and experience descriptions.
 - All technology logos are local SVGs in `public/tech`. Upstream attribution and the license are included in that directory.
 - The speaker icon in the top navigation enables a soft mechanical key click on technology-tile hover, or on a touch-screen tap. Sound starts muted, unlocks through the toggle's user gesture, and can be muted immediately from any section. The Web Audio API synthesizes the click locally; no audio files or libraries are downloaded.
 - The Selected Works section features Syntax, CacheScope, Tether CMS, Pictura, Luxe Tickers, and HubSpot Integration, plus smaller links to Leave Approval System and Feedback Analyzer. Descriptions and links are grounded in the public repositories.

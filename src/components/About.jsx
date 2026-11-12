@@ -1,14 +1,18 @@
 import TechStack from './TechStack';
 
-const layers = ['Frontend', 'Backend', 'Data & cloud'];
+const layers = ['Web & mobile', 'Backend', 'Data & cloud'];
 const skills = [
   { title: 'Frontend development', detail: 'React.js, Redux, Tailwind CSS, CSS, Bootstrap, HTML', layer: 0 },
+  { title: 'Mobile development', detail: 'React Native CLI, Xcode, Android Studio, iOS & Android build configuration', layer: 0 },
   { title: 'Backend development', detail: 'Django, Django REST Framework, FastAPI, Celery, Laravel', layer: 1 },
+  { title: 'AI & LLMs', detail: 'LLM API integration, RAG, embeddings, pgvector', layer: 1 },
+  { title: 'APIs & real-time communication', detail: 'REST APIs, WebSockets, Django Channels', layer: 1 },
+  { title: 'Authentication', detail: 'JWT, OAuth 2.0, Laravel Sanctum', layer: 1 },
   { title: 'Database', detail: 'PostgreSQL, MySQL, MongoDB, Redis, Firebase', layer: 2 },
+  { title: 'Cloud & deployment', detail: 'AWS (EC2, S3), Docker, DockerHub, Nginx, Vercel, GitHub Actions, Cloudinary', layer: 2 },
+  { title: 'Progressive web apps', detail: 'Service workers, Firebase Cloud Messaging, offline support', layer: 0 },
   { title: 'Programming languages', detail: 'Python, JavaScript, PHP, SQL, C' },
-  { title: 'Cloud & deployment', detail: 'AWS (EC2, S3), Cloudinary, Nginx, Vercel, GitHub Actions', layer: 2 },
-  { title: 'Containerization', detail: 'Docker, DockerHub', layer: 2 },
-  { title: 'Version control', detail: 'Git, GitHub' },
+  { title: 'Tools & version control', detail: 'Git, GitHub, Postman, Swagger, Figma' },
   { title: 'Data structures & algorithms', detail: 'Arrays, Linked Lists, Stacks, Queues, Trees, Graphs' },
 ];
 
