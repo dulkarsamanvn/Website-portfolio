@@ -1,0 +1,84 @@
+.experience-section { position: relative; background: #fff; border-top: 1px solid #ecece7; padding-top: 110px; padding-bottom: 110px; }
+.experience-layout { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 6rem; align-items: start; }
+.experience-intro { position: sticky; top: 125px; min-width: 0; }
+.experience-title { font-size: clamp(2.45rem, 4.3vw, 3.65rem); line-height: 0.94; letter-spacing: -0.065em; }
+.experience-intro-copy { font-size: 0.85rem; line-height: 1.85; max-width: 280px; margin-top: 1.7rem; color: #777; }
+.background-resume-link { display: inline-flex; align-items: center; gap: 0.65rem; min-height: 42px; padding: 0.75rem 1rem; margin-top: 1.8rem; border: 1px solid #d8d8d3; border-radius: 5px; font-size: 0.7rem; color: #444; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+.background-resume-link:hover { color: #fff; background: #222; border-color: #222; }
+.experience-education-link { display: flex; align-items: center; gap: 0.65rem; width: fit-content; margin-top: 1.5rem; color: #999; font-size: 0.62rem; }
+.experience-timeline { position: relative; min-width: 0; }
+.experience-track { position: absolute; width: 1px; top: 25px; bottom: 25px; left: 5px; background: #e6e6e0; }
+.experience-track-fill { display: block; width: 100%; height: 100%; background: #777c73; transform-origin: top; }
+.experience-list { display: flex; flex-direction: column; gap: 1.7rem; padding: 0; margin: 0; }
+.experience-entry { position: relative; padding-left: 30px; }
+.experience-dot { position: absolute; z-index: 1; left: 1px; top: 22px; width: 9px; height: 9px; border: 1px solid #777c73; border-radius: 50%; background: #fff; box-shadow: 0 0 0 5px #fff; }
+.experience-entry:first-child .experience-dot { background: #777c73; }
+.experience-card { padding: 1.5rem; border: 1px solid #e6e6e0; border-radius: 11px; background: #fcfcfa; }
+.experience-entry-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1rem; }
+.experience-period { display: inline-flex; align-items: center; gap: 0.45rem; color: #777; font-size: 0.58rem; letter-spacing: 0.035em; }
+.experience-period > span { color: #bbb; }
+.experience-location { display: flex; align-items: center; gap: 0.3rem; color: #999; font-size: 0.56rem; }
+.experience-card h3 { text-transform: none; font-size: 1.35rem; line-height: 1.15; letter-spacing: -0.035em; font-weight: 600; }
+.experience-company { color: #6b6b64; font-size: 0.79rem; line-height: 1.6; margin-top: 0.5rem; }
+.experience-contributions { padding: 0; margin: 1.2rem 0 1.3rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.experience-contributions li { position: relative; padding-left: 0.85rem; font-size: 0.76rem; line-height: 1.8; color: #77776f; }
+.experience-contributions li::before { content: ''; position: absolute; top: 0.6rem; left: 0; height: 3px; width: 3px; border-radius: 50%; background: #b3b4a9; }
+.experience-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.7rem; border-top: 1px solid #eaeae4; padding-top: 1rem; }
+.experience-technologies { display: flex; flex-wrap: wrap; gap: 0.35rem; padding: 0; margin: 0; }
+.experience-technologies li { font-size: 0.5rem; color: #8b8d80; padding: 0.3rem 0.4rem; background: #f2f3ec; border-radius: 3px; line-height: 1.2; }
+.experience-entry-number { color: #c7c8be; font-size: 0.65rem; font-variant-numeric: tabular-nums; }
+.education-section { padding: 75px 0 85px; background: #f7f7f5; border-top: 1px solid #e9e9e3; border-bottom: 1px solid #e9e9e3; }
+.education-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.education-heading .section-title { font-size: clamp(2.45rem, 4.5vw, 3.75rem); letter-spacing: -0.06em; }
+.education-heading > p { font-size: 0.76rem; line-height: 1.75; color: #888; }
+.education-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.education-card { padding: 1.6rem; border: 1px solid #e3e3dd; border-radius: 10px; background: #ffffffd9; }
+.education-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+.education-icon { display: grid; place-items: center; width: 43px; height: 43px; color: #8c8e83; background: #f5f5ef; border: 1px solid #ecece4; border-radius: 9px; }
+.education-period { font-size: 0.62rem; color: #999; font-variant-numeric: tabular-nums; }
+.education-type { display: block; font-size: 0.5rem; letter-spacing: 0.1em; color: #999; text-transform: uppercase; margin-bottom: 0.65rem; }
+.education-card h3 { text-transform: none; font-weight: 600; font-size: 1.15rem; line-height: 1.3; letter-spacing: -0.025em; }
+.education-card > p { font-size: 0.79rem; color: #888; margin-top: 0.55rem; line-height: 1.7; }
+@media (max-width: 1100px) { .experience-layout { gap: 3.5rem; } }
+@media (max-width: 900px) {
+  .experience-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .experience-intro { position: static; }
+  .experience-intro-copy { max-width: 420px; }
+  .experience-card { padding: 1.5rem; }
+}
+@media (max-width: 767px) {
+  .experience-section { padding-top: 75px; padding-bottom: 75px; }
+  .experience-title { font-size: clamp(2.45rem, 7.8vw, 3.3rem); }
+  .experience-intro-copy { font-size: 0.8rem; margin-top: 1.4rem; }
+  .background-resume-link { margin-top: 1.3rem; }
+  .experience-entry { padding-left: 24px; }
+  .experience-track { left: 4px; }
+  .experience-dot { left: 0; }
+  .experience-card { padding: 1.2rem; }
+  .experience-card h3 { font-size: 1.2rem; }
+  .experience-company { font-size: 0.74rem; }
+  .experience-contributions li { font-size: 0.73rem; line-height: 1.8; }
+  .experience-period { font-size: 0.55rem; }
+  .experience-location { font-size: 0.5rem; }
+  .experience-card-footer { align-items: flex-start; }
+  .education-section { padding: 65px 0; }
+  .education-heading { gap: 1rem; }
+  .education-heading .section-title { font-size: 2.45rem; }
+  .education-heading > p { font-size: 0.62rem; }
+  .education-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .education-card { padding: 1.4rem; }
+  .education-card h3 { font-size: 1.1rem; }
+}
+@media (max-width: 380px) {
+  .experience-card { padding: 1rem; }
+  .experience-entry-meta { align-items: flex-start; flex-direction: column; gap: 0.45rem; }
+  .experience-period { font-size: 0.53rem; }
+  .experience-technologies li { font-size: 0.47rem; }
+  .education-heading { display: block; }
+  .education-heading > p { margin-top: 1rem; }
+  .education-heading > p br { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience-entry, .education-card, .experience-track-fill { opacity: 1 !important; transform: none !important; }
+  .background-resume-link { transition: none; }
+}

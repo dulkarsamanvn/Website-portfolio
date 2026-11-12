@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;900&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #555555;
+  --accent-color: #000000;
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --font-main: 'Outfit', sans-serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html { scroll-behavior: smooth; overflow-x: clip; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-tag {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.section-title {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 1;
+}
+
+section[id] { scroll-margin-top: 100px; }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+
+::selection { background: #222; color: #fff; }
+
+@media (max-width: 767px) {
+  .container { padding: 0 1.5rem; }
+  .section-padding { padding: 75px 0; }
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
