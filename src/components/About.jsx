@@ -1,4 +1,5 @@
 import TechStack from './TechStack';
+import ScrollJourney from './ScrollJourney';
 
 const layers = ['Web & mobile', 'Backend', 'Data & cloud'];
 const skills = [
@@ -19,6 +20,7 @@ const skills = [
 export default function About({ sectionRef, activeLayer, playKeyboardSound }) {
   return (
     <section ref={sectionRef} id="about" className="about-section section-padding">
+      <ScrollJourney sectionRef={sectionRef} variant="skills" />
       <div className="container about-grid">
         <div className="about-visual-column">
           <div className="about-sticky">

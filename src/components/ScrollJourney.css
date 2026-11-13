@@ -1,0 +1,65 @@
+.scroll-journey {
+  --journey-road-width: 32px;
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: clip;
+  pointer-events: none;
+  user-select: none;
+}
+
+.scroll-journey--skills { --journey-road-width: 24px; }
+.journey-road { display: block; width: 100%; height: 100%; }
+.journey-road path { stroke-linecap: round; stroke-linejoin: round; }
+.journey-road-layers { opacity: 0.75; }
+.scroll-journey--skills .journey-road-layers { opacity: 0.6; }
+.journey-road-shadow { stroke: #69725c; stroke-opacity: 0.1; stroke-width: calc(var(--journey-road-width) + 4px); }
+.journey-road-edge { stroke: #d9ded0; stroke-width: var(--journey-road-width); }
+.journey-road-rim { stroke: #fff; stroke-width: calc(var(--journey-road-width) + 2px); }
+.journey-road-surface { stroke-width: calc(var(--journey-road-width) - 2px); }
+.journey-road-dashes { stroke: #bcc6af; stroke-width: 1.25; stroke-dasharray: 3 9; }
+.journey-road-progress { stroke: #a2b18f; stroke-width: 1.8; }
+.journey-road-progress-layer { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.75; }
+.scroll-journey--skills .journey-road-progress-layer { opacity: 0.6; }
+.journey-road-progress-layer path { stroke-linecap: round; }
+.journey-connector { stroke: #d6ddcb; stroke-width: 1; stroke-dasharray: 3 7; }
+.journey-landmark { opacity: 0.8; }
+
+.journey-runner-anchor { position: absolute; left: 0; top: 0; width: 0; height: 0; will-change: transform; }
+.journey-runner-shadow {
+  position: absolute;
+  left: -23px;
+  top: -7px;
+  width: 46px;
+  height: 17px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #48503e38, #48503e00 70%);
+}
+
+.journey-runner-facing {
+  position: absolute;
+  width: 78px;
+  height: 112px;
+  left: -39px;
+  bottom: 0;
+  transform-origin: 50% 100%;
+  opacity: 0.92;
+}
+
+.journey-runner-model { position: relative; width: 100%; height: 100%; }
+.journey-boy-canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.journey-boy { display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(2px 2px 2px #333a2b17); }
+.scroll-journey--skills .journey-runner-facing { width: 66px; height: 95px; left: -33px; }
+
+@media (max-width: 900px) {
+  .scroll-journey--experience { --journey-road-width: 20px; }
+  .scroll-journey--experience .journey-runner-facing { width: 52px; height: 75px; left: -26px; }
+  .journey-landmark circle:first-of-type { r: 6px; }
+}
+
+@media (max-width: 767px) {
+  .scroll-journey--skills { --journey-road-width: 14px; }
+  .scroll-journey--skills .journey-runner-facing { width: 48px; height: 69px; left: -24px; }
+  .scroll-journey--skills .journey-runner-shadow { width: 30px; left: -15px; }
+}
+
