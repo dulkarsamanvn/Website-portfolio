@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, Check, Code2, FilePenLine, ImagePlus, MessageSquare, Play, Server, Settings2, ShieldCheck, Sparkles, Users } from 'lucide-react';
+import { ArrowRight, BarChart3, Braces, Check, Code2, FileCode2, FilePenLine, GitPullRequest, ImagePlus, MessageSquare, Play, Server, Settings2, ShieldCheck, Sparkles, Users } from 'lucide-react';
 
 function WindowBar({ title }) {
   return (
@@ -77,6 +77,28 @@ function TetherVisual() {
   );
 }
 
+function GitFoxVisual() {
+  return (
+    <>
+      <div className="preview-backplate gitfox-backplate" />
+      <div className="preview-window gitfox-window">
+        <WindowBar title="gitfox / AI code review" />
+        <div className="gitfox-pr-heading"><GitPullRequest size={18} /><span>GitHub AI reviewer</span></div>
+        <div className="gitfox-file"><FileCode2 size={13} /><span>src/example.py</span><span>Selected diff</span></div>
+        <pre className="gitfox-diff"><span>{'  def order(data):'}</span><span className="gitfox-diff-removed">{'-   return data'}</span><span className="gitfox-diff-added">{'+   return sorted(data)'}</span></pre>
+      </div>
+      <div className="gitfox-workflow">
+        <span className="gitfox-workflow-label">LangGraph workflow</span>
+        <div className="gitfox-workflow-steps">
+          <div><GitPullRequest size={18} /><span>Fetch PR</span></div>
+          <div><FileCode2 size={18} /><span>Diffs</span></div>
+          <div><Braces size={18} /><span>AI input</span></div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 function PicturaVisual() {
   return (
     <>
@@ -125,6 +147,7 @@ export default function ProjectVisual({ type }) {
     case 'syntax': return <SyntaxVisual />;
     case 'cachescope': return <CacheScopeVisual />;
     case 'tether': return <TetherVisual />;
+    case 'gitfox': return <GitFoxVisual />;
     case 'pictura': return <PicturaVisual />;
     case 'luxe': return <LuxeVisual />;
     case 'hubspot': return <HubSpotVisual />;

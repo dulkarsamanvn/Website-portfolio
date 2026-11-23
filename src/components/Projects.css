@@ -91,6 +91,24 @@
 .tether-ai-panel h4 { margin-top: 0.35rem; font-family: Georgia, serif; font-size: 1rem; line-height: 1.3; font-weight: 400; text-transform: none; letter-spacing: -0.02em; color: #493c2f; }
 .tether-ai-panel .preview-text-lines { gap: 4px; margin-top: 0.7rem; }
 .tether-ai-review { display: flex; align-items: center; gap: 0.3rem; border-top: 1px solid #e9e0d4; margin-top: 0.75rem; padding-top: 0.6rem; font-size: 0.75rem; color: #77624d; }
+.project-gitfox .project-visual { background: radial-gradient(ellipse at 15% 10%, #f5f8f4, transparent 70%), #dfe6df; }
+.gitfox-backplate { inset: 21% 11% 16% 16%; background: #9eac9b33; transform: translateZ(-60px) rotateZ(6deg); }
+.gitfox-window { left: 9%; top: 16%; width: 81%; background: #24312d; border-color: #53645a; transform: translateZ(24px) rotateY(5deg) rotateZ(-3deg); }
+.gitfox-window .preview-window-bar { background: #2c3b35; border-color: #46574e; color: #bcc8be; }
+.gitfox-window .preview-window-dots i { background: #7c8e80; }
+.gitfox-pr-heading { display: flex; align-items: center; gap: 0.6rem; padding: 0.8rem; color: #e2eadf; font-size: 0.875rem; }
+.gitfox-pr-heading svg { flex-shrink: 0; color: #b9cba8; }
+.gitfox-file { display: flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; border-block: 1px solid #46574e; color: #bdcbbf; font-size: 0.75rem; }
+.gitfox-file > span:last-child { margin-left: auto; color: #a2b497; }
+.gitfox-diff { padding: 0.65rem 0 1.1rem; margin: 0; color: #c2cec4; font-family: ui-monospace, 'Cascadia Code', monospace; font-size: 0.75rem; line-height: 1.9; }
+.gitfox-diff > span { display: block; padding: 0 0.8rem; }
+.gitfox-diff-removed { color: #dec3b7; background: #7a514a30; }
+.gitfox-diff-added { color: #c0d4ad; background: #829c6230; }
+.gitfox-workflow { position: absolute; left: 8%; right: 6%; bottom: 9%; padding: 0.8rem 0.9rem; background: #fbfcf8; border: 1px solid #c7d2bf; border-radius: 9px; box-shadow: 0 4px 0 #33432c08, 0 16px 30px #33432c20; transform: translateZ(90px) rotateZ(2deg); }
+.gitfox-workflow-label { display: block; font-size: 0.75rem; color: #65745d; }
+.gitfox-workflow-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.6rem; }
+.gitfox-workflow-steps > div { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; font-size: 0.875rem; line-height: 1.2; color: #3e513b; }
+.gitfox-workflow-steps > div + div { border-left: 1px solid #dfe5d8; }
 .project-pictura .project-visual { background: radial-gradient(ellipse at 50% 40%, #f2efff, transparent 75%), #e3e2ef; }
 .pictura-grid { position: absolute; inset: 20% 5% 0; background-image: linear-gradient(#c3bfd82b 1px, transparent 1px), linear-gradient(90deg, #c3bfd82b 1px, transparent 1px); background-size: 24px 24px; transform: translateZ(-140px) rotateX(65deg); }
 .pictura-window { left: 18%; top: 13%; width: 67%; transform: translateZ(24px) rotateY(8deg) rotateZ(4deg); border-color: #ffffff; }
@@ -138,6 +156,13 @@
 .more-project-link p { font-size: 0.69rem; line-height: 1.7; margin-top: 0.4rem; }
 .more-project-link > div > span { display: block; font-size: 0.5rem; color: #999; margin-top: 0.7rem; }
 .more-project-arrow { flex-shrink: 0; margin-left: auto; color: #999; }
+/* Give the final project a full row when the selected list has an odd count. */
+@media (min-width: 768px) {
+  .project-card-shell:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .project-card-shell:last-child:nth-child(odd) .project-card { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .project-card-shell:last-child:nth-child(odd) .project-visual { align-self: center; }
+  .project-card-shell:last-child:nth-child(odd) .project-body { min-width: 0; }
+}
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .project-card:hover .project-hover-layer, .project-card:focus-within .project-hover-layer { transform: translate3d(0, -5px, 15px); }
   .more-project-link:hover { transform: translateY(-3px); border-color: #c4c4ba; background: #fff; }
@@ -216,6 +241,11 @@
   .more-project-link { padding: 1.2rem 1rem; }
 }
 @media (max-width: 380px) {
+  .gitfox-pr-heading { padding: 0.65rem; gap: 0.4rem; }
+  .gitfox-file { padding: 0.4rem 0.6rem; }
+  .gitfox-file > span:last-child { display: none; }
+  .gitfox-diff > span { padding-inline: 0.6rem; }
+  .gitfox-workflow { padding: 0.65rem; }
   .projects-header { display: block; }
   .projects-header-note { margin-top: 1.3rem; }
   .projects-header-note p br { display: none; }

@@ -54,6 +54,15 @@ export const featuredProjects = [
     source: 'https://github.com/dulkarsamanvn/hubspot-fastapi-integration',
     visual: 'hubspot',
   },
+  {
+    id: 'gitfox',
+    title: 'GitFox',
+    category: 'AI code review / in progress',
+    description: 'A GitHub AI code reviewer in development, with pull request diff previews, configurable LLMs, and LangGraph workflows.',
+    technologies: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'LangGraph'],
+    source: 'https://github.com/dulkarsamanvn/gitfox',
+    visual: 'gitfox',
+  },
 ];
 
 export const moreProjects = [
