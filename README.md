@@ -1,6 +1,6 @@
 # Dulkar Saman — Portfolio
 
-A monochrome React + Vite portfolio with a centered portrait and a scroll-controlled technology display.
+A monochrome React + Vite portfolio for an AI & Full Stack Developer, with a centered portrait and a scroll-controlled technology display.
 
 ```sh
 npm install

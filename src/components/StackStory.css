@@ -3,18 +3,18 @@
 .hero-content { position: relative; height: 100%; z-index: 3; pointer-events: none; }
 .hero-content a { pointer-events: auto; }
 .hero-intro { position: absolute; top: 38%; left: 5%; }
-.hero-eyebrow { display: flex; align-items: center; gap: 0.65rem; font-size: 0.57rem; font-weight: 400; letter-spacing: 0.14em; margin-bottom: 1.7rem; }
+.hero-eyebrow { display: flex; align-items: center; gap: 0.65rem; font-size: 0.875rem; font-weight: 400; letter-spacing: 0.1em; margin-bottom: 1.7rem; }
 .status-dot { height: 6px; width: 6px; border-radius: 50%; background: #171717; }
 .main-title { font-size: clamp(4.2rem, 6.6vw, 7rem); line-height: 0.88; font-weight: 900; letter-spacing: -0.065em; }
 .title-period { color: #979797; }
 .hero-description { display: flex; gap: 1rem; margin-top: 2rem; }
 .description-line { width: 30px; height: 1px; background: #777; margin-top: 0.6rem; }
-.hero-description p { font-size: 0.82rem; line-height: 1.65; }
+.hero-description p { max-width: 18rem; font-size: 1rem; line-height: 1.65; }
 .hero-description strong { font-weight: 400; color: #151515; }
 .hero-work-link { display: inline-flex; align-items: center; gap: 1.3rem; margin-top: 1.7rem; border-bottom: 1px solid #bdbdbd; padding-bottom: 0.65rem; font-size: 0.62rem; letter-spacing: 0.12em; }
 .hero-portrait { position: absolute; z-index: 2; left: 50%; bottom: 0; height: 85%; width: min(64vw, 800px); display: flex; justify-content: center; align-items: flex-end; pointer-events: none; }
 .main-portrait { width: 100%; height: 100%; object-fit: contain; object-position: bottom; filter: grayscale(1); }
-.hero-background-word { position: absolute; top: 25%; left: -1%; font-size: clamp(8rem, 18.5vw, 23rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.06em; white-space: nowrap; color: #f2f2f2; user-select: none; }
+.hero-background-word { position: absolute; top: 25%; left: -1%; font-size: clamp(6rem, 14vw, 18rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.06em; white-space: nowrap; color: #f2f2f2; user-select: none; }
 .hero-side-note { position: absolute; top: 43%; right: 5%; text-align: right; }
 .hero-side-note .section-tag { font-size: 0.5rem; margin-bottom: 1rem; letter-spacing: 0.15em; }
 .hero-side-note p { font-size: 0.95rem; line-height: 1.7; color: #666; }
@@ -74,7 +74,7 @@
 @media (max-width: 1000px) {
   .about-grid { gap: 3.5rem; }
   .stack-legend { gap: 0.8rem; }
-  .hero-eyebrow { font-size: 0.49rem; }
+  .hero-description p { max-width: 23vw; }
   .hero-side-note { right: 3%; }
   .hero-side-note p { font-size: 0.8rem; }
   .hero-side-note .section-tag { font-size: 0.43rem; }
@@ -83,12 +83,12 @@
 @media (max-width: 767px) {
   .hero { min-height: 700px; height: 100svh; max-height: 960px; }
   .hero-intro { top: 17%; left: 1.5rem; right: 1.5rem; text-align: center; }
-  .hero-eyebrow { justify-content: center; font-size: 0.48rem; letter-spacing: 0.1em; margin-bottom: 1.4rem; }
+  .hero-eyebrow { justify-content: center; letter-spacing: 0.05em; margin-bottom: 1.4rem; }
   .main-title { font-size: clamp(4.3rem, 18vw, 6.5rem); }
   .hero-description { display: none; }
   .hero-work-link { font-size: 0.56rem; margin-top: 1.2rem; }
   .hero-portrait { width: min(112%, 560px); height: 62%; bottom: 58px; }
-  .hero-background-word { top: 36%; font-size: 27vw; }
+  .hero-background-word { top: 36%; font-size: 20vw; }
   .hero-side-note { display: none; }
   .hero-bottom { left: 1.5rem; right: 1.5rem; bottom: 1.5rem; }
   .hero-discipline { max-width: 155px; font-size: 0.43rem; line-height: 1.9; }

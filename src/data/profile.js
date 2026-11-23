@@ -1,5 +1,7 @@
 export const profile = {
   name: 'Dulkar Saman V N',
+  headline: 'AI & Full Stack Developer',
+  tagline: 'Building AI-powered applications, from interface to API.',
   email: 'dulkarsaman7@gmail.com',
   github: 'https://github.com/dulkarsamanvn',
   linkedin: 'https://www.linkedin.com/in/dulkarsamanvn',

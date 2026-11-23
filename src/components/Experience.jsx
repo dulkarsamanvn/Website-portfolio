@@ -20,7 +20,7 @@ export default function Experience() {
           <h2 id="experience-title" className="experience-title">WORK<br />EXPERIENCE<span className="title-period">.</span></h2>
           </div>
           <div className="experience-summary">
-          <p className="experience-intro-copy">Enterprise software, reliable APIs, and full-stack applications. The work behind the projects.</p>
+          <p className="experience-intro-copy">Enterprise software, AI integrations, and full-stack applications. The work behind the projects.</p>
           <a className="background-resume-link" href={profile.resume.href} download={profile.resume.filename} aria-label="Download Dulkar Saman’s résumé as a PDF"><Download size={15} strokeWidth={1.5} /> Download résumé</a>
           <a className="experience-education-link" href="#education">A little further back <ArrowDown size={13} strokeWidth={1.5} /></a>
           </div>

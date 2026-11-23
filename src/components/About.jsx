@@ -39,7 +39,7 @@ export default function About({ sectionRef, activeLayer, playKeyboardSound }) {
         </div>
         <div className="about-content">
           <p className="large-text">Good software goes<br />beyond the surface.</p>
-          <p className="regular-text">I’m Dulkar, a full stack developer. I build scalable web apps with responsive frontends, clean backends, and the connections that make them work together.</p>
+          <p className="regular-text">I’m Dulkar, an AI and full stack developer. I build web applications with responsive frontends, reliable backends, and practical AI integrations.</p>
           <p className="regular-text">I combine technical skills with creative thinking, focusing on simplicity, intuitive experiences, and clean, efficient code.</p>
           <div className="skills-grid">
             {skills.map((skill, index) => (
