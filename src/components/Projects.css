@@ -71,11 +71,11 @@
 .tether-backplate { inset: 22% 10% 14% 18%; background: #c6b19b29; transform: translateZ(-60px) rotateZ(7deg); }
 .tether-window { left: 11%; top: 15%; width: 74%; transform: translateZ(23px) rotateY(-6deg) rotateZ(-3deg); background: #fffdf8; }
 .tether-layout { display: flex; min-height: 160px; }
-.tether-sidebar { width: 24%; padding: 0.8rem 0.7rem; border-right: 1px solid #eeeae3; display: flex; flex-direction: column; gap: 0.6rem; }
+.tether-sidebar { width: 20%; padding: 0.8rem 0.7rem; border-right: 1px solid #eeeae3; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
 .tether-sidebar strong { font-family: Georgia, serif; font-size: 1.6rem; line-height: 1; letter-spacing: -0.1em; color: #77624d; margin-bottom: 0.2rem; }
-.tether-sidebar > span { font-size: clamp(0.3rem, 0.6vw, 0.42rem); color: #aaa295; white-space: nowrap; }
-.tether-sidebar .is-selected { color: #77624d; }
-.tether-article { width: 76%; padding: 0.8rem 1rem; }
+.tether-sidebar > span { display: grid; place-items: center; color: #aaa295; width: 28px; height: 28px; border-radius: 5px; }
+.tether-sidebar .is-selected { color: #77624d; background: #eee4d4; }
+.tether-article { width: 80%; padding: 0.8rem 1rem; }
 .tether-article-kicker { font-size: clamp(0.25rem, 0.45vw, 0.32rem); letter-spacing: 0.1em; color: #b4a590; }
 .tether-article h4 { font-family: Georgia, serif; font-size: clamp(0.9rem, 1.7vw, 1.3rem); font-weight: 400; text-transform: none; line-height: 1.05; letter-spacing: -0.04em; color: #645642; margin-top: 0.4rem; }
 .tether-cover { height: 32px; background: #eee4d4; margin-top: 0.6rem; position: relative; overflow: hidden; }
@@ -84,9 +84,13 @@
 .preview-text-lines { display: flex; flex-direction: column; gap: 3px; margin-top: 0.6rem; }
 .preview-text-lines i { height: 3px; background: #e9e3d9; width: 100%; }
 .preview-text-lines i:last-child { width: 70%; }
-.tether-article-actions { display: flex; gap: 0.6rem; color: #b2a58f; margin-top: 0.6rem; }
-.tether-publish { right: 5%; bottom: 14%; transform: translateZ(100px) rotateZ(2deg); }
-.tether-publish .preview-chip-icon { background: #f6f0e6; color: #ac9475; }
+.tether-ai-panel { position: absolute; right: 6%; bottom: 10%; width: 56%; min-width: 176px; max-width: calc(100% - 2rem); padding: 0.9rem; background: #fffdf8; border: 1px solid #d4c4af; border-radius: 10px; box-shadow: 0 4px 0 #644d3308, 0 16px 30px #644d3326; transform: translateZ(90px) rotateZ(2deg); }
+.tether-ai-heading { display: flex; align-items: center; gap: 0.45rem; font-size: 0.875rem; color: #785a3c; }
+.tether-ai-heading svg, .tether-ai-review svg { flex-shrink: 0; }
+.tether-ai-label { display: block; margin-top: 0.7rem; font-size: 0.75rem; color: #8b7966; }
+.tether-ai-panel h4 { margin-top: 0.35rem; font-family: Georgia, serif; font-size: 1rem; line-height: 1.3; font-weight: 400; text-transform: none; letter-spacing: -0.02em; color: #493c2f; }
+.tether-ai-panel .preview-text-lines { gap: 4px; margin-top: 0.7rem; }
+.tether-ai-review { display: flex; align-items: center; gap: 0.3rem; border-top: 1px solid #e9e0d4; margin-top: 0.75rem; padding-top: 0.6rem; font-size: 0.75rem; color: #77624d; }
 .project-pictura .project-visual { background: radial-gradient(ellipse at 50% 40%, #f2efff, transparent 75%), #e3e2ef; }
 .pictura-grid { position: absolute; inset: 20% 5% 0; background-image: linear-gradient(#c3bfd82b 1px, transparent 1px), linear-gradient(90deg, #c3bfd82b 1px, transparent 1px); background-size: 24px 24px; transform: translateZ(-140px) rotateX(65deg); }
 .pictura-window { left: 18%; top: 13%; width: 67%; transform: translateZ(24px) rotateY(8deg) rotateZ(4deg); border-color: #ffffff; }
@@ -151,7 +155,7 @@
   .tether-article { padding: 0.55rem 0.7rem; }
   .tether-sidebar { padding: 0.6rem 0.5rem; }
   .tether-cover { height: 23px; }
-  .tether-publish { bottom: 14%; }
+  .tether-ai-panel { right: 5%; padding: 0.75rem; }
   .cache-terminal { padding: 0.65rem 0.7rem 0.5rem; }
   .cache-report-label { margin-top: 0.6rem; }
   .cache-verdict { gap: 0.1rem; }
@@ -190,12 +194,10 @@
   .cache-verdict { gap: 0.3rem; }
   .cache-package { bottom: 14%; }
   .tether-layout { min-height: 150px; }
-  .tether-sidebar > span { font-size: 0.36rem; }
   .tether-article-kicker { font-size: 0.3rem; }
   .tether-article h4 { font-size: 1.05rem; }
   .tether-article { padding: 0.7rem 0.8rem; }
   .tether-cover { height: 27px; }
-  .tether-publish { bottom: 14%; }
   .pictura-art { height: 150px; }
   .pictura-art > span { font-size: 0.3rem; }
   .pictura-prompt > span:first-of-type { font-size: 0.45rem; }
@@ -246,7 +248,7 @@
   .tether-article h4 { font-size: 0.95rem; }
   .tether-article { padding: 0.6rem; }
   .tether-sidebar { padding: 0.6rem 0.4rem; }
-  .tether-publish { right: 4%; bottom: 14%; }
+  .tether-ai-panel { right: 4%; padding: 0.75rem; }
   .pictura-window { left: 12%; width: 76%; }
   .pictura-art { height: 130px; }
   .pictura-art > span { font-size: 0.25rem; }

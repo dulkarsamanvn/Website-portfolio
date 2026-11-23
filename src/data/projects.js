@@ -21,9 +21,9 @@ export const featuredProjects = [
   {
     id: 'tether',
     title: 'Tether CMS',
-    category: 'Full stack / publishing',
-    description: 'A publishing workspace for writing, sharing, and saving articles, powered by a Laravel API and a React frontend.',
-    technologies: ['Laravel', 'React', 'PHP', 'PostgreSQL'],
+    category: 'Full stack / AI publishing',
+    description: 'A publishing workspace with AI title and excerpt suggestions, scheduled posts, and private author analytics.',
+    technologies: ['Laravel', 'React', 'PHP', 'PostgreSQL', 'LLM APIs'],
     source: 'https://github.com/dulkarsamanvn/Tether',
     visual: 'tether',
   },

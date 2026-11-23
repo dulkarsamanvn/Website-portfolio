@@ -1,4 +1,4 @@
-import { ArrowRight, Bookmark, Check, Code2, Heart, ImagePlus, MessageSquare, Play, Server, ShieldCheck, Users } from 'lucide-react';
+import { ArrowRight, BarChart3, Check, Code2, FilePenLine, ImagePlus, MessageSquare, Play, Server, Settings2, ShieldCheck, Sparkles, Users } from 'lucide-react';
 
 function WindowBar({ title }) {
   return (
@@ -50,13 +50,29 @@ function TetherVisual() {
     <>
       <div className="preview-backplate tether-backplate" />
       <div className="preview-window tether-window">
-        <WindowBar title="tether / publishing" />
+        <WindowBar title="tether / editor" />
         <div className="tether-layout">
-          <div className="tether-sidebar"><strong>t.</strong><span className="is-selected">My blogs</span><span>Saved</span><span>Write</span></div>
-          <div className="tether-article"><span className="tether-article-kicker">A SPACE FOR YOUR IDEAS</span><h4>Words that<br />bring us closer.</h4><div className="tether-cover"><i /><i /></div><div className="preview-text-lines"><i /><i /><i /></div><div className="tether-article-actions"><Heart size={12} /><MessageSquare size={12} /><Bookmark size={12} /></div></div>
+          <div className="tether-sidebar">
+            <strong>t.</strong>
+            <span className="is-selected"><FilePenLine size={16} /></span>
+            <span><BarChart3 size={16} /></span>
+            <span><Settings2 size={16} /></span>
+          </div>
+          <div className="tether-article">
+            <span className="tether-article-kicker">A SPACE FOR YOUR IDEAS</span>
+            <h4>Words that<br />bring us closer.</h4>
+            <div className="tether-cover"><i /><i /></div>
+            <div className="preview-text-lines"><i /><i /><i /></div>
+          </div>
         </div>
       </div>
-      <div className="preview-float tether-publish"><span className="preview-chip-icon"><Check size={16} /></span><span><strong>Create. Publish. Connect.</strong><small>Laravel + React</small></span></div>
+      <div className="tether-ai-panel">
+        <div className="tether-ai-heading"><Sparkles size={16} /><span>AI suggestions</span></div>
+        <span className="tether-ai-label">3 title ideas + excerpt</span>
+        <h4>Ideas worth sharing.</h4>
+        <div className="preview-text-lines"><i /><i /></div>
+        <div className="tether-ai-review"><Check size={14} /><span>Review, then apply</span></div>
+      </div>
     </>
   );
 }
