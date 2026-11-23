@@ -57,9 +57,9 @@ const Navbar = ({ keyboardSound }) => {
       className={`navbar ${scrolled ? 'scrolled' : ''}`}
     >
       <div className="nav-container glass">
-        <div className="logo">
+        {/* <div className="logo">
           <a href="#home" aria-label="Dulkar Saman — home">DULKAR<span className="logo-slash"> / </span></a>
-        </div>
+        </div> */}
         <ul id="primary-navigation" className={`nav-links${menuOpen ? ' is-open' : ''}`}>
           {navLinks.map((link) => (
             <li key={link.name}>
