@@ -7,13 +7,13 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/dulkarsamanvn',
   handle: 'dulkarsamanvn',
   whatsapp: {
-    number: '919207384248',
-    displayNumber: '+91 92073 84248',
+    number: '+971566905833',
+    displayNumber: '+971566905833',
     message: 'Hi Dulkar, I found your portfolio and would like to connect.',
   },
   resume: {
-    href: '/Dulkar_Saman_Resume.pdf',
-    filename: 'Dulkar_Saman_Resume.pdf',
+    href: '/Dulkar_Saman_V_N_Resume.pdf',
+    filename: 'Dulkar_Saman_V_N_Resume.pdf',
     pages: 2,
   },
 };

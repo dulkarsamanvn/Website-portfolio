@@ -25,7 +25,7 @@ Use `npm run build` for the production bundle and `npm run preview` to serve it 
 - The Contact code symbol assembles on entry.
 - Work Experience follows the projects, with three résumé-based roles, contribution summaries, an alternating layout along the winding background path, and a résumé download. Education lists both qualifications from the supplied PDF.
 - Contact links use the résumé's email, WhatsApp number, GitHub, and LinkedIn details. The WhatsApp button uses [Click to Chat](https://faq.whatsapp.com/5913398998672934) with the international number and a URL-encoded greeting. It opens the chat for the visitor to review and send the message. Edit the number and greeting in `src/data/profile.js`.
-- The original two-page PDF is served from `public/Dulkar_Saman_Resume.pdf` and is available from Experience and Contact.
+- The original two-page PDF is served from `public/Dulkar_Saman_V_N_Resume.pdf` and is available from Experience and Contact.
 - Motion follows native scrolling, including touch, keyboard, and anchor navigation. It does not track the mouse or intercept wheel input.
 
 The technology tiles and project previews use CSS 3D transforms and Motion. The runner alone uses a lazy-loaded Three.js canvas, with no external model or texture downloads. Reduced motion keeps the runner and technology display static and disables project tilt and portrait parallax.
